@@ -1,0 +1,53 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+/* Apply background color to the entire body */
+body {
+    background-color: #f5f5f5; /* Light grey background */
+    font-family: 'Arial', sans-serif; /* Change font family to Arial */
+    font-size: 16px; /* Change the base font size */
+}
+
+/* Customize the navbar */
+.navbar {
+    font-size: 20px; /* Change font size */
+}
+
+/* Customize the navbar brand */
+.navbar-brand {
+    font-size: 25px; /* Larger font size for the brand */
+    font-family:'Roboto'; 
+    font-weight:bold;/* Different font family for the brand */
+}
+
+/* Customize the footer */
+.footer {
+    background-color: #d3d3d3; /* Light grey background for the footer */
+    font-size: 14px; /* Smaller font size for the footer */
+    padding: 10px 0;
+}
+
+/* Customize table */
+.table-custom {
+    background-color: #f0f8ff; /* Light blue background color for the table */
+}
+
+    .table-custom thead tr {
+        background-color: #4682b4; /* Dark blue background color for header columns */
+        color: white; /* White text color for header columns */
+    }

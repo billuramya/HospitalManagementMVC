@@ -1,0 +1,110 @@
+﻿@model CommonLayer.Model.AppointmentModel
+
+@{
+    ViewData["Title"] = "AddAppointment";
+}
+
+<style>
+    body {
+        background-color: #f8f9fa; /* Light background color */
+        font-family: Arial, sans-serif; /* Font family */
+        color: #333; /* Default text color */
+    }
+
+    h1 {
+        color: #007bff; /* Bootstrap primary color */
+        text-align: center; /* Center align heading */
+        margin-bottom: 20px;
+    }
+
+    .row {
+        margin-top: 20px; /* Space above the form */
+    }
+
+    .form-group {
+        margin-bottom: 20px; /* Space between form groups */
+    }
+
+    .btn-primary {
+        background-color: #007bff; /* Bootstrap primary color */
+        border-color: #007bff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+            border-color: #0056b3;
+        }
+
+    .btn-secondary {
+        background-color: #6c757d; /* Bootstrap secondary color */
+        border-color: #6c757d;
+    }
+
+        .btn-secondary:hover {
+            background-color: #5a6268; /* Darker shade on hover */
+            border-color: #5a6268;
+        }
+
+    .text-danger {
+        color: #dc3545; /* Bootstrap danger color for validation messages */
+    }
+</style>
+
+<h1>Add Appointment</h1>
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form asp-action="AddAppointment">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Doctorid" class="control-label">Doctor ID</label>
+                <input asp-for="Doctorid" class="form-control" />
+                <span asp-validation-for="Doctorid" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Patientid" class="control-label">Patient ID</label>
+                <input asp-for="Patientid" class="form-control" />
+                <span asp-validation-for="Patientid" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="date" class="control-label">Date</label>
+                <input asp-for="date" class="form-control" />
+                <span asp-validation-for="date" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Starttime" class="control-label">Start Time</label>
+                <input asp-for="Starttime" class="form-control" />
+                <span asp-validation-for="Starttime" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Endtime" class="control-label">End Time</label>
+                <input asp-for="Endtime" class="form-control" />
+                <span asp-validation-for="Endtime" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="concern" class="control-label">Concern</label>
+                <input asp-for="concern" class="form-control" />
+                <span asp-validation-for="concern" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+        </form>
+        <div class="m-2">
+            <a asp-action="GetAllAppointmentDetails" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

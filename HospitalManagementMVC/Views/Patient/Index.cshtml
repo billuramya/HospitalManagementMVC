@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Ensure you have a layout file
+}
+
+
+<style>
+    body {
+        background-image: url('~/images/hospital-background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .header-section {
+        background: #08a29e; /* Semi-transparent blue */
+        color: white;
+        padding: 2rem 0;
+        margin-bottom: 4rem;
+    }
+    .header-section h1, .header-section p {
+        margin-bottom: 1rem;
+    }
+    .action-buttons a {
+        width: 200px; 
+        font-size: 1.2rem;
+    }
+</style>
+
+
+<header class="header-section">
+    <div class="container text-center">
+        <h1 class="display-4">Patient Management System</h1>
+        <p class="lead">Manage patient records efficiently and effectively</p>
+    </div>
+
+    <div class="container">
+        <h2 class="mb-4 text-center">Patient Activeties</h2>
+        <div class="action-buttons text-center my-4">
+            <a class="btn btn-warning btn-lg" asp-controller="Patient" asp-action="AddPatient">Register for Patient</a>
+            <a class="btn btn-success btn-lg mx-2" asp-controller="Patient" asp-action="GetAllPatientDetails">Get All Patient Details</a>
+           
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+

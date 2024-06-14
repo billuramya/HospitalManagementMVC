@@ -1,0 +1,122 @@
+﻿@model IEnumerable<CommonLayer.Model.DoctorModel>
+
+@{
+    ViewData["Title"] = "GetAllDoctorDetails";
+}
+
+<style>
+    body {
+        background-color: #f8f9fa; /* Light background color */
+        font-family: Arial, sans-serif; /* Font family */
+        color: #333; /* Default text color */
+    }
+
+    h1 {
+        color: #007bff; /* Bootstrap primary color */
+        text-align: center; /* Center align heading */
+        margin-bottom: 20px;
+    }
+
+    .table {
+        width: 100%;
+        margin: 0 auto; /* Center align table */
+        background-color: white;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+        .table th,
+        .table td {
+            text-align: left; /* Align text to the left */
+            padding: 12px; /* Padding around content */
+        }
+
+        .table th {
+            background-color: #007bff; /* Bootstrap primary color for headers */
+            color: white; /* White text color for headers */
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f2f2f2; /* Alternate row color */
+        }
+
+    .btn-container {
+        text-align: center; /* Center align buttons */
+        margin-bottom: 20px;
+    }
+
+    a.btn-create {
+        background-color: #28a745; /* Bootstrap success color */
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+        a.btn-create:hover {
+            background-color: #218838;
+            text-align: center;
+        }
+
+    a.btn-action {
+        color: #007bff; /* Bootstrap primary color for action links */
+        margin-right: 10px; /* Space between action links */
+        text-decoration: none;
+    }
+
+        a.btn-action:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+</style>
+
+<h1>GetAllDoctorDetails</h1>
+
+<div class="container">
+    <p>
+        <a asp-action="AddDoctor" class="btn btn-create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Id)</th>
+                <th>@Html.DisplayNameFor(model => model.Name)</th>
+                <th>@Html.DisplayNameFor(model => model.Email)</th>
+                <th>@Html.DisplayNameFor(model => model.PhoneNumber)</th>
+                <th>@Html.DisplayNameFor(model => model.Age)</th>
+                <th>@Html.DisplayNameFor(model => model.gender)</th>
+                <th>@Html.DisplayNameFor(model => model.Address)</th>
+                <th>@Html.DisplayNameFor(model => model.Qualification)</th>
+                <th>@Html.DisplayNameFor(model => model.Specialization)</th>
+                <th>@Html.DisplayNameFor(model => model.Experience)</th>
+                <th>@Html.DisplayNameFor(model => model.DoctorImage)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                    <td>@Html.DisplayFor(modelItem => item.PhoneNumber)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Age)</td>
+                    <td>@Html.DisplayFor(modelItem => item.gender)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Address)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Qualification)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Specialization)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Experience)</td>
+                    <td>@Html.DisplayFor(modelItem => item.DoctorImage)</td>
+                    <td>
+                        @Html.ActionLink("Edit", "UpdateDoctor", new { id = item.Id }, new { @class = "btn-action" })
+                        @Html.ActionLink("Details", "GetByIdDoctor", new { id = item.Id }, new { @class = "btn-action" })
+                        @Html.ActionLink("Delete", "DeleteDoctorById", new { id = item.Id }, new { @class = "btn-action"})
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

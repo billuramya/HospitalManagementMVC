@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    /* Layout = "~/Views/Shared/_Layout.cshtml"; */ // Ensure you have a layout file
+}
+
+<!-- Custom CSS for background image and additional styling -->
+<style>
+    body {
+        background-image: url('~/images/hospital-background.jpg'); /* Path to your background image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .header-section {
+        background: #91f0fa; /* Semi-transparent blue */
+        color:black;
+        padding: 2rem 0;
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+        .header-section h1, .header-section p {
+            margin-bottom: 1rem;
+        }
+
+    .action-buttons a {
+        width: 200px;
+        font-size: 1.2rem;
+    }
+</style>
+
+<header class="header-section">
+    <div class="container">
+        <h1 class="display-4">Appointment Management System</h1>
+        <p class="lead">Manage Appointment records efficiently and effectively</p>
+    </div>
+    <div class="container text-center">
+        <h2 class="mb-4">Appointment Activities</h2>
+        <div class="action-buttons">
+            <a class="btn btn-success" asp-controller="Appointment" asp-action="AddAppointment">Add Appointment</a>
+            <a class="btn btn-success m-4" asp-controller="Appointment" asp-action="GetAllAppointmentDetails">Get All Appointments</a>
+            <a class="btn btn-success m-4" asp-controller="Appointment" asp-action="GetDoctorWithPatients">Get Doctor With Patients</a>
+        </div>
+    </div>
+
+</header>
+

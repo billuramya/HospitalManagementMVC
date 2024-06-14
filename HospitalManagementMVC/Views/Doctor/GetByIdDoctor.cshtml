@@ -1,0 +1,150 @@
+﻿@model CommonLayer.Model.DoctorModel
+
+@{
+    ViewData["Title"] = "GetByIdDoctor";
+}
+
+<style>
+    body {
+        background-color: #f8f9fa; /* Light background color */
+        font-family: Arial, sans-serif; /* Font family */
+        color: #333; /* Text color */
+    }
+
+    h1 {
+        color: #007bff; /* Bootstrap primary color */
+        text-align: center; /* Center align headings */
+        margin-bottom: 20px;
+    }
+
+    .details-container {
+        background-color: white;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px auto;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        max-width: 800px; /* Center the container with a fixed width */
+    }
+
+    dl.row dt {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px; /* Adjust margin bottom for dt elements */
+    }
+
+    dl.row dd {
+        margin-bottom: 15px; /* Adjust margin bottom for dd elements */
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        margin-right: 10px;
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+</style>
+
+
+<h1>GetByIdDoctor</h1>
+
+<div class="details-container">
+    <div>
+        <h4>Doctor Details</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Id)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Id)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.PhoneNumber)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Age)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Age)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.gender)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.gender)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Qualification)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Qualification)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Specialization)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Specialization)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Experience)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Experience)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.DoctorImage)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.DoctorImage)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        @Html.ActionLink("Edit", "UpdateDoctor", new { id = Model.Id }, new { @class = "btn btn-primary" }) |
+        <a asp-action="GetAllDoctorDetails" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>

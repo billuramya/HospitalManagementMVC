@@ -1,0 +1,108 @@
+﻿@model IEnumerable<CommonLayer.Model.DoctorWithPatient>
+
+@{
+    ViewData["Title"] = "GetDoctorWithPatients";
+}
+
+<style>
+    body {
+        background-color: #f8f9fa; /* Light background color */
+        font-family: Arial, sans-serif; /* Font family */
+    }
+
+    h1 {
+        color: #007bff; /* Bootstrap primary color */
+        text-align: center; /* Center align heading */
+        margin-bottom: 20px;
+    }
+
+    .table {
+        width: 100%;
+        margin: 0 auto; /* Center align table */
+        background-color: white;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+        .table th, .table td {
+            text-align: left; /* Align text to the left */
+            padding: 15px;
+        }
+
+        .table th {
+            background-color: #007bff; /* Bootstrap primary color for headers */
+            color: white; /* White text color for headers */
+        }
+
+        .table tr:nth-child(even) {
+            background-color: #f2f2f2; /* Alternate row color */
+        }
+
+    .btn-container {
+        text-align: center; /* Center align buttons */
+        margin-bottom: 20px;
+    }
+
+    a.btn-create {
+        background-color: #28a745; /* Bootstrap success color */
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+        a.btn-create:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+    a.btn-action {
+        color: #007bff; /* Bootstrap primary color for action links */
+        text-decoration: none;
+        margin-right: 10px; /* Space between action links */
+    }
+
+        a.btn-action:hover {
+            text-decoration: underline;
+        }
+</style>
+
+<h1>Get Doctor With Patients</h1>
+
+<div class="container">
+    <p>
+        <a asp-action="AddAppointment" class="btn btn-create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.DoctorName)</th>
+                <th>@Html.DisplayNameFor(model => model.DoctorImage)</th>
+                <th>@Html.DisplayNameFor(model => model.PatientId)</th>
+                <th>@Html.DisplayNameFor(model => model.PatientName)</th>
+                <th>@Html.DisplayNameFor(model => model.PatientEmail)</th>
+                <th>@Html.DisplayNameFor(model => model.PatientAge)</th>
+                <th>@Html.DisplayNameFor(model => model.Gender)</th>
+                <th>@Html.DisplayNameFor(model => model.Concern)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.DoctorName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.DoctorImage)</td>
+                    <td>@Html.DisplayFor(modelItem => item.PatientId)</td>
+                    <td>@Html.DisplayFor(modelItem => item.PatientName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.PatientEmail)</td>
+                    <td>@Html.DisplayFor(modelItem => item.PatientAge)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Gender)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Concern)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

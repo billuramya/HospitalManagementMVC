@@ -1,0 +1,17 @@
+C:\Users\billu\source\repos\HospitalManagementMVC\RepoLayer\bin\Debug\net6.0\RepoLayer.deps.json
+C:\Users\billu\source\repos\HospitalManagementMVC\RepoLayer\bin\Debug\net6.0\RepoLayer.runtimeconfig.json
+C:\Users\billu\source\repos\HospitalManagementMVC\RepoLayer\bin\Debug\net6.0\RepoLayer.dll
+C:\Users\billu\source\repos\HospitalManagementMVC\RepoLayer\bin\Debug\net6.0\RepoLayer.pdb
+C:\Users\billu\source\repos\HospitalManagementMVC\RepoLayer\bin\Debug\net6.0\CommonLayer.dll
+C:\Users\billu\source\repos\HospitalManagementMVC\RepoLayer\bin\Debug\net6.0\CommonLayer.pdb
+C:\Users\billu\source\repos\HospitalManagementMVC\RepoLayer\obj\Debug\net6.0\RepoLayer.csproj.AssemblyReference.cache
+C:\Users\billu\source\repos\HospitalManagementMVC\RepoLayer\obj\Debug\net6.0\RepoLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\billu\source\repos\HospitalManagementMVC\RepoLayer\obj\Debug\net6.0\RepoLayer.AssemblyInfoInputs.cache
+C:\Users\billu\source\repos\HospitalManagementMVC\RepoLayer\obj\Debug\net6.0\RepoLayer.AssemblyInfo.cs
+C:\Users\billu\source\repos\HospitalManagementMVC\RepoLayer\obj\Debug\net6.0\RepoLayer.csproj.CoreCompileInputs.cache
+C:\Users\billu\source\repos\HospitalManagementMVC\RepoLayer\obj\Debug\net6.0\RepoLayer.csproj.CopyComplete
+C:\Users\billu\source\repos\HospitalManagementMVC\RepoLayer\obj\Debug\net6.0\RepoLayer.dll
+C:\Users\billu\source\repos\HospitalManagementMVC\RepoLayer\obj\Debug\net6.0\refint\RepoLayer.dll
+C:\Users\billu\source\repos\HospitalManagementMVC\RepoLayer\obj\Debug\net6.0\RepoLayer.pdb
+C:\Users\billu\source\repos\HospitalManagementMVC\RepoLayer\obj\Debug\net6.0\RepoLayer.genruntimeconfig.cache
+C:\Users\billu\source\repos\HospitalManagementMVC\RepoLayer\obj\Debug\net6.0\ref\RepoLayer.dll

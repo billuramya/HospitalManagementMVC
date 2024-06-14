@@ -1,0 +1,112 @@
+﻿@model IEnumerable<CommonLayer.Model.AppointmentModel>
+
+@{
+    ViewData["Title"] = "GetAllAppointmentDetails";
+}
+
+<style>
+    body {
+        background-color: #f8f9fa; /* Light background color */
+        font-family: Arial, sans-serif; /* Font family */
+    }
+
+    h1 {
+        color: #007bff; /* Bootstrap primary color */
+        text-align: center; /* Center align heading */
+        margin-bottom: 20px;
+    }
+
+    .table {
+        width: 100%;
+        margin: 0 auto; /* Center align table */
+        background-color: white;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+        .table th, .table td {
+            text-align: left; /* Align text to the left */
+            padding: 15px;
+        }
+
+        .table th {
+            background-color: #007bff; /* Bootstrap primary color for headers */
+            color: white; /* White text color for headers */
+        }
+
+        .table tr:nth-child(even) {
+            background-color: #f2f2f2; /* Alternate row color */
+        }
+
+    .btn-container {
+        text-align: center; /* Center align buttons */
+        margin-bottom: 20px;
+    }
+
+    a.btn-create {
+        background-color: #28a745; /* Bootstrap success color */
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+        a.btn-create:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+    a.btn-action {
+        color: #007bff; /* Bootstrap primary color for action links */
+        text-decoration: none;
+        margin-right: 10px; /* Space between action links */
+    }
+
+        a.btn-action:hover {
+            text-decoration: underline;
+        }
+</style>
+
+<h1>Get All Appointment Details</h1>
+
+<div class="container">
+    <p>
+        <a asp-action="AddAppointment" class="btn btn-create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.AMId)</th>
+                <th>@Html.DisplayNameFor(model => model.Doctorid)</th>
+                <th>@Html.DisplayNameFor(model => model.Patientid)</th>
+                <th>@Html.DisplayNameFor(model => model.date)</th>
+                <th>@Html.DisplayNameFor(model => model.Starttime)</th>
+                <th>@Html.DisplayNameFor(model => model.Endtime)</th>
+                <th>@Html.DisplayNameFor(model => model.concern)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.AMId)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Doctorid)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Patientid)</td>
+                    <td>@Html.DisplayFor(modelItem => item.date)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Starttime)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Endtime)</td>
+                    <td>@Html.DisplayFor(modelItem => item.concern)</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.AMId }, new { @class = "btn btn-action" })
+                        @Html.ActionLink("Details", "Details", new { id = item.AMId }, new { @class = "btn btn-action" })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.AMId }, new { @class = "btn btn-action" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
